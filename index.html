@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Confetti Number Guessing Game</title>
+  <title>Number Guessing Game</title>
+  <script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js')
+    .then(() => console.log('Service Worker Registered'));
+}
+  </script>
   <style>
     /* ===== Background Animation ===== */
     body {
@@ -213,12 +219,6 @@
   </style>
 </head>
 <body>
-  <script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw.js')
-    .then(() => console.log('Service Worker Registered'));
-}
-  </script>
   <div class="game-container">
     <h1>🎉 Guess The Number</h1>
     <p>Choose difficulty:</p>
